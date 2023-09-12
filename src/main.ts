@@ -24,7 +24,7 @@ gltfLoader.load(
     gltf.scene.position.set(0, 0, 7)
     gltf.scene.rotation.y = Math.PI
     gltf.scene.traverse((node) => {
-      if (node.isMesh)
+      if (node instanceof THREE.Mesh)
         node.material.metalness = 0
     })
     scene.add(gltf.scene);
